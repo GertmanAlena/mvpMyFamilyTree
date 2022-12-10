@@ -2,9 +2,8 @@ package Repositiry;
 
 import Human.Human;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.net.Proxy;
+import java.util.*;
 
 /**
  * Repository класс дерева с методом создания, рождения, брака
@@ -24,7 +23,17 @@ public class Repository <T extends Human> implements Iterable<T> {
     }
     public void load(){
         String res = fileService.load();
+        System.out.println("res в repo load" + res);
         // передаём в метод парсинга, в котором добавим в лист
+        parsLoad(res);
+    }
+    public void parsLoad(String res){
+
+        String[] fn = res.split("/");
+        for (int i = 0; i < fn.length; i++) {
+//            familyTree.add((T) fn[i]);
+
+        }
     }
 
     /**
@@ -37,7 +46,6 @@ public class Repository <T extends Human> implements Iterable<T> {
         Human p = new Human(name,  data, gender, null, null);
         p.setId(idCount++);
         familyTree.add((T) p);
-
     }
     /**
      * метод рождения ребёнка
@@ -81,7 +89,7 @@ public class Repository <T extends Human> implements Iterable<T> {
         StringBuilder sb = new StringBuilder();
         for (T human : familyTree){
             sb.append(human);
-            sb.append("* ");
+            sb.append("/ ");
         }
         return sb.toString();
     }

@@ -9,7 +9,6 @@ import ui.View;
  */
 public class Presenter {
     private View view;
-//    Scanner sc = new Scanner(System.in);
     private Repository<Human> repository;
 
     //мето load вызов
@@ -21,26 +20,25 @@ public class Presenter {
 
     public void create(String name, String data, String gender){
         repository.createFamilyHeader(name, data, gender);
-//        repository.iterator();
         repository.print();
-
     }
 
     public void save(){
         repository.save();
     }
-
+    public void load(){
+        repository.load();
+    }
     public void showAll(){
         repository.print();
     }
-    public void born(){
+    public void born(String name, String data, String gender){
         repository.born(repository.getPerson(view.getName(), view.getData()),
                 repository.getPerson(view.getName(), view.getData()),
-                view.getName(), view.getData(), view.getGender());
+                name, data, gender);
         repository.print();
+
     }
-
-
     public void getPerson(String name, String data) {
         Human human = repository.getPerson(name, data);
         view.print(human.getInfo());

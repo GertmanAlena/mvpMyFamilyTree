@@ -20,7 +20,8 @@ public class ConsoleUI implements View {
     }
     @Override
     public void start() {
-        // вызов load в презентере
+        presenter.load();
+        // idCount  после загрузки прировнять в последнему
         try (Scanner scan = new Scanner(System.in)) {
 
             while (true) {
@@ -32,7 +33,8 @@ public class ConsoleUI implements View {
                         presenter.create(getName(), getData(), getGender());
                         break;
                     case "2":
-                        presenter.born();
+
+                        presenter.born(getName(), getData(), getGender());
                         break;
                     case "3":
                         presenter.showAll();

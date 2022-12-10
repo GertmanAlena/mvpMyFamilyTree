@@ -28,6 +28,7 @@ public class Human implements Comparable<Human> {
         this.father = father;
         this.mother = mother;
     }
+
     public Human(Human human){
         this.human = human;
     }
@@ -94,8 +95,8 @@ public class Human implements Comparable<Human> {
 
     @Override
     public String toString() {
-        return "Human[id=" + id + ", name=" + name + ", data=" + data +  ", gender=" + gender + ", marriageNo="
-                + marriageNo +  ", children=" + children + "]";
+        return "Human: id-" + id + ", name: " + name + ", data: " + data +  ", gender: " + gender + ", marriageNo: "
+                + marriageNo +  ", children: " + children + " ";
     }
 
     public String getInfo() {

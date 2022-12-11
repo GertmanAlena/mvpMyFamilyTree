@@ -1,15 +1,15 @@
 package Presenter;
 
 //import Human.Human;
-import Repositiry.Repository;
+import Repositoiry.Repository;
 import ui.View;
 
 /**
  * Presenter для связи репозитория с пользователем
  */
 public class Presenter {
-    private View view;
-    private Repository repository;
+    private final View view;
+    private final Repository repository;
 
     //мето load вызов
     public Presenter(View view, Repository repository) {
@@ -41,8 +41,12 @@ public class Presenter {
     }
     public void getPerson(String name, String data) {
         var a = repository.getPerson(name, data);
-        view.print(a.getInfo());
+        view.print(a.getInfo()+"\n");
 //        Human human = repository.getPerson(name, data);
 //        view.print(human.getInfo());
+    }
+
+    public void sort(){
+        repository.sortByName();
     }
 }

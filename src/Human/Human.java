@@ -3,12 +3,11 @@ package Human;
 import java.util.ArrayList;
 
 /**
- * метод создания сущности Human
+ * создание сущности Human
  * implements Comparable<Human> говорит о том, что мы сможем производить сортировку
  * <Human> с чем сравниваем
  * тут конструктор, гетеры и сетеры,сетод создания списка детей
  * переопределён метод toString
- * переопределён метод speak
  * переопределён метод compareTo
  */
 public class Human implements Comparable<Human> {
@@ -103,9 +102,9 @@ public class Human implements Comparable<Human> {
 
     @Override
     public String toString() {
-        return id + " " + name + " " + data + " " + gender + " " + marriageNo + " " + children;
-//        return "Human: id-" + id + ", name: " + name + ", data: " + data +  ", gender: " + gender + ", marriageNo: "
-//                + marriageNo +  ", children: " + children + " ";
+//        return id + " " + name + " " + data + " " + gender + " " + marriageNo + " " + children;
+        return "Human: id-" + id + ", name: " + name + ", data: " + data +  ", gender: " + gender + ", marriageNo: "
+                + marriageNo +  ", children: " + children + " ";
     }
 
     public String getInfo() {

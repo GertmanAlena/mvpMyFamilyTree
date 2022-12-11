@@ -1,9 +1,12 @@
-package Repositiry;
+package Repositoiry;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
 
+/**
+ * класс сохранения в .txt и выгрузки из него
+ */
 public class FileService implements FileServisView {
 
     private final static String filePath = "family.txt";
@@ -18,7 +21,6 @@ public class FileService implements FileServisView {
             e.printStackTrace();
         }
     }
-
 
     @Override
     public String load(){

@@ -1,0 +1,2 @@
+0 Алёна 13.12.1984 Ж 0 null/ 1 Александр 19.03.1985 М 0 null/ 
+Human: id-0, name: Алёна, data: 13.12.1984, gender: Ж, marriageNo: 0, children: [Human: id-0, name: Елизавета, data: 12.02.2009, gender: Ж, marriageNo: 0, children: null ] / Human: id-1, name: Александр, data: 19.03.1985, gender: М, marriageNo: 0, children: [Human: id-0, name: Елизавета, data: 12.02.2009, gender: Ж, marriageNo: 0, children: null ] / Human: id-0, name: Елизавета, data: 12.02.2009, gender: Ж, marriageNo: 0, children: null / 

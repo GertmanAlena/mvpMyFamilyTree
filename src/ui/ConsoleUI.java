@@ -23,10 +23,9 @@ public class ConsoleUI implements View {
         presenter.load();
         // idCount  после загрузки прировнять в последнему
         try (Scanner scan = new Scanner(System.in)) {
-
             while (true) {
-                System.out.println(" 1 - Внести узел дерева 2 - born 3 - showAll 4 - getPerson " +
-                        "5 - save\n \033[1;30;46mДля выхода нажмите (0)\033[0m");
+                System.out.println(" 1 - Внести узел дерева 2 - вступили в брак 3 - рождение ребёнка 4 - showAll 5 - getPerson " +
+                        "6 - save 7 - сотировка\n \033[1;30;46mДля выхода нажмите (0)\033[0m");
                 String key = scan.next();
                 System.out.print("\033[H\033[J");
                 switch (key) {
@@ -34,17 +33,22 @@ public class ConsoleUI implements View {
                         presenter.create(getName(), getData(), getGender());
                         break;
                     case "2":
-
-                        presenter.born(getName(), getData(), getGender());
+                        //брак
                         break;
                     case "3":
-                        presenter.showAll();
+                        presenter.born(getName(), getData(), getGender());
                         break;
                     case "4":
-                        presenter.getPerson(getName(), getData());
+                        presenter.showAll();
                         break;
                     case "5":
+                        presenter.getPerson(getName(), getData());
+                        break;
+                    case "6":
                         presenter.save();
+                        break;
+                    case "7":
+                        presenter.sort();
                         break;
                     case "0":
                         System.exit(0);

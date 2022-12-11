@@ -1,17 +1,17 @@
-package Repositiry;
+package Repositoiry;
 
 import Human.Human;
 
 import java.util.*;
-
-import static java.util.logging.Level.parse;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Repository класс дерева с методом создания, рождения, брака
  */
 public class Repository <T extends Human> implements Iterable<T>{
     /**
-     *  @param familyTree
+     *  @param familyTree семейное дерево
      */
 
     private final List<T> familyTree = new ArrayList<>();
@@ -24,37 +24,34 @@ public class Repository <T extends Human> implements Iterable<T>{
     }
     public void load(){
         String res = fileService.load();
-
         if(res.isEmpty()){
             System.out.println("\033[3;35mдерево пустое\033[0m");
             // передаём в метод парсинга, в котором добавим в лист
-
         }
-        else  parsLoad(res);;
-
+        else  parsLoad(res);
     }
     public void parsLoad(String res){
-        String[] sb = res.split(" / "); // все люди под индексами
-        for (int i = 0; i < sb.length; i++){
-            System.out.println("sb[" + i + "] - " + sb[i]); // i = 0 первый человек id-0 Алёна 13.12.1984 Ж marriageNo 0 children: null
-            String[] arrSplit = sb[i].split(" ");   // arrSplit[0]->id-0  arrSplit[1]->Алёна
 
-            for (int j = 0; j < arrSplit.length; ) {
-                String id = arrSplit[j++];
-                String name = arrSplit[j++];
-                String data = arrSplit[j++];
-                String gender = arrSplit[j++];
-                createFamilyHeaderLoad(id, name, data, gender);
-//                System.out.println("sarrSplit[" + j + "] - " + arrSplit[j]);
-                String marriage = arrSplit[j++];
-                String children = arrSplit[j++];
+//        String[] sb = res.split(" / "); // все люди под индексами
+//        for (int i = 0; i < sb.length; i++) {
+//            familyTree.add(sb[i]);
+//        }
 
-            }
-//                for (int j = 0; j < sb[i].length(); j++) {
-//    //                createFamilyHeaderLoad(arrSplit[i], arrSplit[i+1], arrSplit[i+2], arrSplit[i+3]);
-//                    System.out.println("j[ " + j + "]" + arrSplit[j]);
-//                }
-        }
+//        for (int i = 0; i < sb.length; i++){
+//            System.out.println("sb[" + i + "] - " + sb[i]); // i = 0 первый человек id-0 Алёна 13.12.1984 Ж marriageNo 0 children: null
+//            String[] arrSplit = sb[i].split("/ ");   // arrSplit[0]->id-0  arrSplit[1]->Алёна
+
+//            for (int j = 0; j < arrSplit.length; ) {
+//                String id = arrSplit[j++];
+//                String name = arrSplit[j++];
+//                String data = arrSplit[j++];
+//                String gender = arrSplit[j++];
+//                createFamilyHeaderLoad(id, name, data, gender);
+//                String marriage = arrSplit[j++];
+//                String children = arrSplit[j++];
+//
+//            }
+//        }
     }
     public void createFamilyHeaderLoad(String id, String name, String data, String gender){
         Human p = new Human(name,  data, gender, null, null);
@@ -145,6 +142,8 @@ public class Repository <T extends Human> implements Iterable<T>{
 //    public void sortByName() {
 //        Collections.sort(familyTree, new HumanComparatorByName());
 //    }
-
+    public void sortByName() {
+        Collections.sort(familyTree, new HumanComparatorByName());
+    }
 
 }

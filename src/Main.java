@@ -1,5 +1,5 @@
 import Presenter.Presenter;
-import Repositiry.Repository;
+import Repositoiry.Repository;
 import ui.ConsoleUI;
 import ui.View;
 

@@ -28,6 +28,14 @@ public class Human implements Comparable<Human> {
         this.father = father;
         this.mother = mother;
     }
+//    public Human(String human){
+//        String[] arrSplit = human.split(",");   //слова отдельно одного человека
+//       int i = 0;
+//            Human p = new Human(arrSplit[i+1], arrSplit[i + 2], arrSplit[i + 3]);
+//            p.
+//        }
+//
+//    }
 
     public Human(Human human){
         this.human = human;
@@ -95,8 +103,9 @@ public class Human implements Comparable<Human> {
 
     @Override
     public String toString() {
-        return "Human: id-" + id + ", name: " + name + ", data: " + data +  ", gender: " + gender + ", marriageNo: "
-                + marriageNo +  ", children: " + children + " ";
+        return id + " " + name + " " + data + " " + gender + " " + marriageNo + " " + children;
+//        return "Human: id-" + id + ", name: " + name + ", data: " + data +  ", gender: " + gender + ", marriageNo: "
+//                + marriageNo +  ", children: " + children + " ";
     }
 
     public String getInfo() {

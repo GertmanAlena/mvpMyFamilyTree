@@ -1,6 +1,6 @@
 package Presenter;
 
-import Human.Human;
+//import Human.Human;
 import Repositiry.Repository;
 import ui.View;
 
@@ -9,7 +9,7 @@ import ui.View;
  */
 public class Presenter {
     private View view;
-    private Repository<Human> repository;
+    private Repository repository;
 
     //мето load вызов
     public Presenter(View view, Repository repository) {
@@ -20,7 +20,7 @@ public class Presenter {
 
     public void create(String name, String data, String gender){
         repository.createFamilyHeader(name, data, gender);
-        repository.print();
+//        repository.convertListToString();
     }
 
     public void save(){
@@ -36,11 +36,13 @@ public class Presenter {
         repository.born(repository.getPerson(view.getName(), view.getData()),
                 repository.getPerson(view.getName(), view.getData()),
                 name, data, gender);
-        repository.print();
+        repository.convertListToString();
 
     }
     public void getPerson(String name, String data) {
-        Human human = repository.getPerson(name, data);
-        view.print(human.getInfo());
+        var a = repository.getPerson(name, data);
+        view.print(a.getInfo());
+//        Human human = repository.getPerson(name, data);
+//        view.print(human.getInfo());
     }
 }

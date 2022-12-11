@@ -2,13 +2,14 @@ package Repositiry;
 
 import Human.Human;
 
-import java.net.Proxy;
 import java.util.*;
+
+import static java.util.logging.Level.parse;
 
 /**
  * Repository класс дерева с методом создания, рождения, брака
  */
-public class Repository <T extends Human> implements Iterable<T> {
+public class Repository <T extends Human> implements Iterable<T>{
     /**
      *  @param familyTree
      */
@@ -16,24 +17,50 @@ public class Repository <T extends Human> implements Iterable<T> {
     private final List<T> familyTree = new ArrayList<>();
     int idCount = 0;
     int marriageCount = 0;
-    FileService fileService = new FileService();
+    FileServisView fileService = new FileService();
 
     public void save(){
-        fileService.save(print());
+        fileService.save(convertListToString());
     }
     public void load(){
         String res = fileService.load();
-        System.out.println("res в repo load" + res);
-        // передаём в метод парсинга, в котором добавим в лист
-        parsLoad(res);
-    }
-    public void parsLoad(String res){
 
-        String[] fn = res.split("/");
-        for (int i = 0; i < fn.length; i++) {
-//            familyTree.add((T) fn[i]);
+        if(res.isEmpty()){
+            System.out.println("\033[3;35mдерево пустое\033[0m");
+            // передаём в метод парсинга, в котором добавим в лист
 
         }
+        else  parsLoad(res);;
+
+    }
+    public void parsLoad(String res){
+        String[] sb = res.split(" / "); // все люди под индексами
+        for (int i = 0; i < sb.length; i++){
+            System.out.println("sb[" + i + "] - " + sb[i]); // i = 0 первый человек id-0 Алёна 13.12.1984 Ж marriageNo 0 children: null
+            String[] arrSplit = sb[i].split(" ");   // arrSplit[0]->id-0  arrSplit[1]->Алёна
+
+            for (int j = 0; j < arrSplit.length; ) {
+                String id = arrSplit[j++];
+                String name = arrSplit[j++];
+                String data = arrSplit[j++];
+                String gender = arrSplit[j++];
+                createFamilyHeaderLoad(id, name, data, gender);
+//                System.out.println("sarrSplit[" + j + "] - " + arrSplit[j]);
+                String marriage = arrSplit[j++];
+                String children = arrSplit[j++];
+
+            }
+//                for (int j = 0; j < sb[i].length(); j++) {
+//    //                createFamilyHeaderLoad(arrSplit[i], arrSplit[i+1], arrSplit[i+2], arrSplit[i+3]);
+//                    System.out.println("j[ " + j + "]" + arrSplit[j]);
+//                }
+        }
+    }
+    public void createFamilyHeaderLoad(String id, String name, String data, String gender){
+        Human p = new Human(name,  data, gender, null, null);
+        int i = Integer.parseInt (id);
+        p.setId(i);
+        familyTree.add((T) p);
     }
 
     /**
@@ -47,6 +74,7 @@ public class Repository <T extends Human> implements Iterable<T> {
         p.setId(idCount++);
         familyTree.add((T) p);
     }
+
     /**
      * метод рождения ребёнка
      * @param father отец
@@ -85,7 +113,7 @@ public class Repository <T extends Human> implements Iterable<T> {
      * метод перебора дерева с помощью итератора
      * вызов метода speak через интерфейс
      */
-    public String print(){ // возвращаем  String
+    public String convertListToString(){ // возвращаем  String
         StringBuilder sb = new StringBuilder();
         for (T human : familyTree){
             sb.append(human);
@@ -93,18 +121,22 @@ public class Repository <T extends Human> implements Iterable<T> {
         }
         return sb.toString();
     }
-
-    public void print2(String name){ // возвращать string в презентер
-        ArrayList<T> findList = new ArrayList<>();
-        for (T test : familyTree) {
-            if (((Human)test).getName() == name){  // TODO equals
-                findList.add((T) test);
-            }
-        }
-        for (int i = 0; i < findList.size(); i++) {
-            System.out.println(findList.get(i));
+    public void print(){
+        for (T human : familyTree){
+            System.out.println(human.getInfo());
         }
     }
+//    public void print2(String name){ // возвращать string в презентер
+//        ArrayList<T> findList = new ArrayList<>();
+//        for (T test : familyTree) {
+//            if (test.getName() == name){  // TODO equals
+//                findList.add(test);
+//            }
+//        }
+//        for (int i = 0; i < findList.size(); i++) {
+//            System.out.println(findList.get(i));
+//        }
+//    }
     @Override
     public Iterator<T> iterator() {
         return new GroupIterator(familyTree);

@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14fe9146-c33b-476f-bd94-05589561da7d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/family.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repositiry/FileServisView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/family.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Human/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presenter/Presenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositiry/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositiry/FileService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositiry/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositiry/Repository.java" afterDir="false" />
@@ -17,6 +19,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,19 +39,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/studies/JAVA/mvpMyFamilyTree/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/studies/JAVA/mvpMyFamilyTree/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\studies\JAVA\mvpMyFamilyTree\src" />
@@ -60,7 +69,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670690160708</updated>
-      <workItem from="1670690162355" duration="13516000" />
+      <workItem from="1670690162355" duration="14406000" />
+      <workItem from="1670748171706" duration="24095000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;mvp начало положено))&quot;">
       <created>1670691243158</created>
@@ -69,7 +79,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670691243158</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&quot;чуть отредактировала&quot;">
+      <created>1670706207676</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670706207676</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,6 +94,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;mvp начало положено))&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;mvp начало положено))&quot;" />
+    <MESSAGE value="&quot;чуть отредактировала&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;чуть отредактировала&quot;" />
   </component>
 </project>

@@ -7,10 +7,13 @@ public interface View {
     void start();
 
     String getName();
+    String getNameChild();
 
     String getData();
+    String getDataChild();
 
     String getGender();
+    String getGenderChild();
 
     void print(String text);
 

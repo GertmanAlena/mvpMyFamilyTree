@@ -36,7 +36,7 @@ public class Presenter {
         repository.born(repository.getPerson(view.getName(), view.getData()),
                 repository.getPerson(view.getName(), view.getData()),
                 name, data, gender);
-        repository.convertListToString();
+//        repository.convertListToString();
 
     }
     public void getPerson(String name, String data) {

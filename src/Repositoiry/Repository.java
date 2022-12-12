@@ -1,10 +1,7 @@
 package Repositoiry;
-
 import Human.Human;
 
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Repository класс дерева с методом создания, рождения, брака
@@ -18,40 +15,25 @@ public class Repository <T extends Human> implements Iterable<T>{
     int idCount = 0;
     int marriageCount = 0;
     FileServisView fileService = new FileService();
+//    TestView test = new Test();
 
     public void save(){
         fileService.save(convertListToString());
     }
     public void load(){
         String res = fileService.load();
-        if(res.isEmpty()){
+//        test.emptyRes(res);
+        if(res.isEmpty()) {
             System.out.println("\033[3;35mдерево пустое\033[0m");
-            // передаём в метод парсинга, в котором добавим в лист
         }
-        else  parsLoad(res);
+        else parsLoad(res);
     }
     public void parsLoad(String res){
+        ParsingLoad pars = new ParsingLoad();
+        String[] sb = res.split(" / "); // все люди под индексами
+        pars.parse(sb);
 
-//        String[] sb = res.split(" / "); // все люди под индексами
-//        for (int i = 0; i < sb.length; i++) {
-//            familyTree.add(sb[i]);
-//        }
 
-//        for (int i = 0; i < sb.length; i++){
-//            System.out.println("sb[" + i + "] - " + sb[i]); // i = 0 первый человек id-0 Алёна 13.12.1984 Ж marriageNo 0 children: null
-//            String[] arrSplit = sb[i].split("/ ");   // arrSplit[0]->id-0  arrSplit[1]->Алёна
-
-//            for (int j = 0; j < arrSplit.length; ) {
-//                String id = arrSplit[j++];
-//                String name = arrSplit[j++];
-//                String data = arrSplit[j++];
-//                String gender = arrSplit[j++];
-//                createFamilyHeaderLoad(id, name, data, gender);
-//                String marriage = arrSplit[j++];
-//                String children = arrSplit[j++];
-//
-//            }
-//        }
     }
     public void createFamilyHeaderLoad(String id, String name, String data, String gender){
         Human p = new Human(name,  data, gender, null, null);
@@ -139,6 +121,7 @@ public class Repository <T extends Human> implements Iterable<T>{
         return new GroupIterator(familyTree);
 //        return familyTree.iterator();
     }
+
 //    public void sortByName() {
 //        Collections.sort(familyTree, new HumanComparatorByName());
 //    }

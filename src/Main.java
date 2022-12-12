@@ -11,7 +11,5 @@ public class Main {
         Presenter presenter = new Presenter(view,repository);
 
         view.start();
-
-
     }
 }

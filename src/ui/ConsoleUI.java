@@ -36,7 +36,7 @@ public class ConsoleUI implements View {
                         //брак
                         break;
                     case "3":
-                        presenter.born(getName(), getData(), getGender());
+                        presenter.born(getNameChild(), getDataChild(), getGenderChild());
                         break;
                     case "4":
                         presenter.showAll();
@@ -60,21 +60,37 @@ public class ConsoleUI implements View {
         }
 
     }
+
+
     @Override
     public String getName() {
-        System.out.printf("FirstName: ");
+        System.out.printf("Введите имя: ");
+        return scanner.nextLine();
+    }
+    @Override
+    public String getNameChild() {
+        System.out.printf("Введите имя ребёнка: ");
         return scanner.nextLine();
     }
 
     @Override
     public String getData() {
-        System.out.printf("Data: ");
+        System.out.printf("Введите дату рождения: ");
         return scanner.nextLine();
     }
-
+    @Override
+    public String getDataChild() {
+        System.out.printf("Введите дату рождения ребёнка: ");
+        return scanner.nextLine();
+    }
     @Override
     public String getGender() {
-        System.out.printf("Gender: ");
+        System.out.printf("Введите пол: ");
+        return scanner.nextLine();
+    }
+    @Override
+    public String getGenderChild() {
+        System.out.printf("Введите пол ребёнка: ");
         return scanner.nextLine();
     }
 

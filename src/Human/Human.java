@@ -27,27 +27,12 @@ public class Human implements Comparable<Human> {
         this.father = father;
         this.mother = mother;
     }
-//    public Human(String human){
-//        String[] arrSplit = human.split(",");   //слова отдельно одного человека
-//       int i = 0;
-//            Human p = new Human(arrSplit[i+1], arrSplit[i + 2], arrSplit[i + 3]);
-//            p.
-//        }
-//
-//    }
-
     public Human(Human human){
         this.human = human;
     }
 
     public String getName() {
         return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setData(String data) {
-        this.data = data;
     }
     public String getData() {
         return data;
@@ -58,35 +43,8 @@ public class Human implements Comparable<Human> {
     public void setId(int id) {
         this.id = id;
     }
-    public String getGender() {
-        return gender;
-    }
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-    public Human getFather() {
-        return father;
-    }
-    public void setFather(Human father) {
-        this.father = father;
-    }
-    public Human getHuman() {
-        return human;
-    }
-    public void setHuman(Human human) {
-        this.human = human;
-    }
-    public Human getMother() {
-        return mother;
-    }
-    public void setMother(Human mother) {
-        this.mother = mother;
-    }
-    public int getMarriageNo() {
-        return marriageNo;
-    }
-    public void setMarriageNo(int marriageNo) {
-        this.marriageNo = marriageNo;
+    public void setMarriageNo(int marriage) {
+        this.marriageNo = marriage;
     }
     public ArrayList<Human> getChildren() {
         return children;
@@ -94,12 +52,10 @@ public class Human implements Comparable<Human> {
     public void setChildren(ArrayList<Human> children) {
         this.children = children;
     }
-
     public void addChildren(Human human) {
         if (this.getChildren() == null) {this.setChildren(new ArrayList<Human>());}
         this.getChildren().add(human);
     }
-
     @Override
     public String toString() {
 //        return id + " " + name + " " + data + " " + gender + " " + marriageNo + " " + children;

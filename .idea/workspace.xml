@@ -5,18 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14fe9146-c33b-476f-bd94-05589561da7d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Repositoiry/HumanComparatorByName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repositoiry/RepositoryView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repositoiry/ParsingLoad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repositoiry/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repositoiry/TestView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/family.txt" beforeDir="false" afterPath="$PROJECT_DIR$/family.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Human/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositiry/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/FileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositiry/FileServisView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/FileServisView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositiry/GroupIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/GroupIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositiry/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositoiry/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ConsoleUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -43,19 +42,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/studies/JAVA/MyFamilyTree",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/studies/JAVA/MyFamilyTree&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\studies\JAVA\mvpMyFamilyTree\src" />
@@ -75,7 +74,8 @@
       <option name="presentableId" value="Default" />
       <updated>1670690160708</updated>
       <workItem from="1670690162355" duration="14406000" />
-      <workItem from="1670748171706" duration="28999000" />
+      <workItem from="1670748171706" duration="30893000" />
+      <workItem from="1670837345775" duration="15873000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;mvp начало положено))&quot;">
       <created>1670691243158</created>
@@ -98,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670779197139</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&quot;с парсингом так и не разобралась&quot;">
+      <created>1670784018743</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670784018743</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +115,7 @@
     <MESSAGE value="&quot;mvp начало положено))&quot;" />
     <MESSAGE value="&quot;чуть отредактировала&quot;" />
     <MESSAGE value="&quot;Добавила красок и практичеси сделала чтение из файла&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Добавила красок и практичеси сделала чтение из файла&quot;" />
+    <MESSAGE value="&quot;с парсингом так и не разобралась&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;с парсингом так и не разобралась&quot;" />
   </component>
 </project>

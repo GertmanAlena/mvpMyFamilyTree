@@ -3,7 +3,7 @@ package Human;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class Human {
+public class Human implements HumanInterface {
     private String name;
     private String id;
     private String gender;
@@ -70,6 +70,6 @@ public class Human {
     }
 
     public String getInfo() {
-        return String.format("имя: %s дата рождения: %s пол: %s", name, data, gender);
+        return String.format("id: %s имя: %s дата рождения: %s пол: %s брак: %d дети: %s", id, name, data, gender, marriage, children);
     }
 }

@@ -1,2 +1,2 @@
-
-Human: id-0, name: Алёна, data: 13.12.1984, gender: Ж, marriageNo: 0, children: [Human: id-2, name: Лиза, data: 12.02.2009, gender: Ж, marriageNo: 0, children: null , Human: id-3, name: Данила, data: 16.06.2014, gender: М, marriageNo: 0, children: null ] / Human: id-1, name: Александр, data: 19.03.1985, gender: М, marriageNo: 0, children: [Human: id-2, name: Лиза, data: 12.02.2009, gender: Ж, marriageNo: 0, children: null , Human: id-3, name: Данила, data: 16.06.2014, gender: М, marriageNo: 0, children: null ] / Human: id-2, name: Лиза, data: 12.02.2009, gender: Ж, marriageNo: 0, children: null / Human: id-3, name: Данила, data: 16.06.2014, gender: М, marriageNo: 0, children: null / 
+id-13121984, Алёна, дата рождения: 13.12.1984, пол: ж, брак №: 1, дети:null /
+id-19031985, Саша, дата рождения: 19.03.1985, пол: м, брак №: 1, дети:null /

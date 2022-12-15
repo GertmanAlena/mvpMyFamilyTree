@@ -6,8 +6,8 @@ public class ProcedurHuman {
      * @param data
      * @return
      */
-    public String DataToId(String data) {
-        String res1 = data.substring(0,2);
+    public String DataToId(String data) {  //13.12.1984
+        String res1 = data.substring(0,2); //0123456789
         String res2 = data.substring(3,5);
         String res3 = data.substring(6,10);
 

@@ -22,9 +22,7 @@ public class Presenter {
      */
     public void create(String name, String data, String gender){
         repository.createFamilyHeader(name.substring(0, 1).toUpperCase() + name.substring(1), data, gender);
-
     }
-
     /**
      * показать всё дерево
      */
@@ -43,9 +41,7 @@ public class Presenter {
                 repository.getPerson(view.getNameMather(), view.getDataMather()),
                 name.substring(0, 1).toUpperCase() + name.substring(1), data, gender);
 //        repository.convertListToString();
-
     }
-
     /**
      * вступили в брак
      */
@@ -53,28 +49,25 @@ public class Presenter {
         repository.marriage(repository.getPerson(view.getNameHusband(), view.getDataHusband()),
                 repository.getPerson(view.getNameWafe(), view.getDataWafe()));
     }
-
     /**
      * сохраняем в файл
      */
     public void save(){
         repository.save();
     }
-
     /**
      * поиск человека по дереву
      * @param name имя
      * @param data дата рождения
      * @return     */
     public boolean getPerson(String name, String data){
-
         var a = repository.getPerson(name, data);
         if(a != null){
             view.print(a.getInfo()+"\n");
         }
+        System.out.println("Что-то пошло не так, попробуйте снова");
         return true;
     }
-
     /**
      * загрузка из файла при входе в программу
      */

@@ -1,97 +1,57 @@
 package Repositoiry;
+
 import Human.Human;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-/**
- * Repository класс дерева с методом создания, рождения, брака
- */
-public class Repository <T extends Human> implements Iterable<T>{
-    /**
-     *  @param familyTree семейное дерево
-     */
-
-    private final List<T> familyTree = new ArrayList<>();
-    int idCount = 0;
+public class Repository <T extends Human> implements Iterable<T> {
+    ProcedurHuman pr = new ProcedurHuman();
     int marriageCount = 0;
-    FileServisView fileService = new FileService();
-//    TestView test = new Test();
+    private final List<T> familyTree = new ArrayList<>();
+    FileServisView file = new FileServis();
 
-    public void save(){
-        fileService.save(convertListToString());
-    }
-    public void load(){
-        String res = fileService.load();
-//        test.emptyRes(res);
-        if(res.isEmpty()) {
-            System.out.println("\033[3;35mдерево пустое\033[0m");
-        }
-        else parsLoad(res);
-    }
-    public void parsLoad(String res){
-        ParsingLoad pars = new ParsingLoad();
-        String[] sb = res.split(" / "); // все люди под индексами
-        pars.parse(sb);
+    Pars pars = new Pars();
 
-
-    }
-    public void createFamilyHeaderLoad(String id, String name, String data, String gender){
-        Human p = new Human(name,  data, gender, null, null);
-        int i = Integer.parseInt (id);
-        p.setId(i);
-        familyTree.add((T) p);
-    }
-
-    /**
-     * метод создания корня дерева familyTree
-     * @param name имя человека
-     * @param data дата рождения
-     * @param gender пол человека
-     */
     public void createFamilyHeader(String name, String data, String gender){
         Human p = new Human(name,  data, gender, null, null);
-        p.setId(idCount++);
+        String id = pr.DataToId(data);
+        p.setId(id);
         familyTree.add((T) p);
     }
-
-    /**
-     * метод рождения ребёнка
-     * @param father отец
-     * @param mother мать
-     * @param name имя ребёнка
-     * @param data дата рождения ребёнка
-     * @param gender пол ребёнка
-     */
     public void born(T father, T mother, String name, String data, String gender){
-        // сначала ищем родителей, потом...String father
         Human p = new Human(name, data, gender, father, mother);
-        p.setId(idCount++);
+        String id = pr.DataToId(data);
+        p.setId(id);
         father.addChildren(p);
         mother.addChildren(p);
         familyTree.add((T) p);
     }
-    /**
-     * метод, если Human вступил в брак с присваиванием ID брака
-     * @param husband сохраняется как супруг
-     * @param wife сохраняется как супруга
-     */
-    public void marriage(T husband, T wife){
-        husband.setMarriageNo(++marriageCount);
-        wife.setMarriageNo(marriageCount);
+    @Override
+    public Iterator<T> iterator() {
+        return null;
     }
-
+    public void showAll(){
+        for (T human : familyTree){
+            System.out.println(human.getInfo());
+        }
+    }
     public T getPerson(String name, String data){
         for (T test : familyTree) {
-            if (test.getName().equals(name) && test.getData().equals(data)) {
+            if (test.getName().equals(name.substring(0, 1).toUpperCase() + name.substring(1)) && test.getData().equals(data)) {
                 return test;
             }
         }
         return null;
     }
-    /**
-     * метод перебора дерева с помощью итератора
-     * вызов метода speak через интерфейс
-     */
+    public void marriage(T husband, T wafe){
+        husband.setMarriage(++marriageCount);
+        wafe.setMarriage(marriageCount);
+    }
+    public void save(){
+        file.save(convertListToString());
+    }
     public String convertListToString(){ // возвращаем  String
         StringBuilder sb = new StringBuilder();
         for (T human : familyTree){
@@ -100,33 +60,16 @@ public class Repository <T extends Human> implements Iterable<T>{
         }
         return sb.toString();
     }
-    public void print(){
-        for (T human : familyTree){
-            System.out.println(human.getInfo());
-        }
-    }
-//    public void print2(String name){ // возвращать string в презентер
-//        ArrayList<T> findList = new ArrayList<>();
-//        for (T test : familyTree) {
-//            if (test.getName() == name){  // TODO equals
-//                findList.add(test);
-//            }
-//        }
-//        for (int i = 0; i < findList.size(); i++) {
-//            System.out.println(findList.get(i));
-//        }
-//    }
-    @Override
-    public Iterator<T> iterator() {
-        return new GroupIterator(familyTree);
-//        return familyTree.iterator();
-    }
+    public void load() {
+        String res = file.load();
 
-//    public void sortByName() {
-//        Collections.sort(familyTree, new HumanComparatorByName());
-//    }
-    public void sortByName() {
-        Collections.sort(familyTree, new HumanComparatorByName());
+        if(res.isEmpty()) return;
+        else pars.parse(res);
+//        {
+//            System.out.println("\033[1;30;44mдерево пустое!!!\033[0m");
+//        }
+
+
     }
 
 }

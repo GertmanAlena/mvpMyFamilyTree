@@ -4,11 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
 
-/**
- * класс сохранения в .txt и выгрузки из него
- */
-public class FileService implements FileServisView {
-
+public class FileServis implements FileServisView {
     private final static String filePath = "family.txt";
 
     @Override
@@ -21,17 +17,21 @@ public class FileService implements FileServisView {
             e.printStackTrace();
         }
     }
-
     @Override
-    public String load(){
+    public String load() {
         StringBuilder sb = new StringBuilder();
         try(Scanner scanner = new Scanner(new File(filePath))){
             while (scanner.hasNextLine()){
                 sb.append(scanner.nextLine());
             }
         }catch (Exception e){
-            e.printStackTrace();
+            System.out.println("\033[1;30;44mдерево пустое!!!\033[0m");
         }
         return sb.toString();
     }
 }
+//        pars.parse(loadFiles);
+
+
+
+

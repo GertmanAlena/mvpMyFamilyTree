@@ -1,7 +1,5 @@
 package ui;
-
 import Presenter.Presenter;
-
 import java.util.Scanner;
 
 public class ConsoleUI implements View {
@@ -18,22 +16,25 @@ public class ConsoleUI implements View {
     public void setPresenter(Presenter presenter){
         this.presenter = presenter;
     }
+
+
     @Override
     public void start() {
         presenter.load();
         // idCount  после загрузки прировнять в последнему
         try (Scanner scan = new Scanner(System.in)) {
             while (true) {
-                System.out.println(" 1 - Внести узел дерева 2 - вступили в брак 3 - рождение ребёнка 4 - showAll 5 - getPerson " +
-                        "6 - save 7 - сотировка\n \033[1;30;46mДля выхода нажмите (0)\033[0m");
+                System.out.println(" 1 - Внести узел дерева 2 - вступили в брак 3 - рождение ребёнка 4 - Показать всё дерево 5 - найти человека " +
+                        "6 - save 7 - ----\n\033[1;35mДля выхода нажмите (0)\033[0m");
                 String key = scan.next();
                 System.out.print("\033[H\033[J");
                 switch (key) {
                     case "1":
                         presenter.create(getName(), getData(), getGender());
+
                         break;
                     case "2":
-                        //брак
+                        presenter.marriage();
                         break;
                     case "3":
                         presenter.born(getNameChild(), getDataChild(), getGenderChild());
@@ -48,7 +49,7 @@ public class ConsoleUI implements View {
                         presenter.save();
                         break;
                     case "7":
-                        presenter.sort();
+//
                         break;
                     case "0":
                         System.exit(0);
@@ -68,19 +69,8 @@ public class ConsoleUI implements View {
         return scanner.nextLine();
     }
     @Override
-    public String getNameChild() {
-        System.out.printf("Введите имя ребёнка: ");
-        return scanner.nextLine();
-    }
-
-    @Override
     public String getData() {
         System.out.printf("Введите дату рождения: ");
-        return scanner.nextLine();
-    }
-    @Override
-    public String getDataChild() {
-        System.out.printf("Введите дату рождения ребёнка: ");
         return scanner.nextLine();
     }
     @Override
@@ -89,13 +79,66 @@ public class ConsoleUI implements View {
         return scanner.nextLine();
     }
     @Override
+    public String getNameChild() {
+        System.out.printf("Введите имя ребёнка: ");
+        return scanner.nextLine();
+    }
+    @Override
+    public String getDataChild() {
+        System.out.printf("Введите дату рождения ребёнка: ");
+        return scanner.nextLine();
+    }
+    @Override
     public String getGenderChild() {
         System.out.printf("Введите пол ребёнка: ");
         return scanner.nextLine();
     }
+    @Override
+    public String getNameHusband() {
+        System.out.printf("Введите имя супруга: ");
+        return scanner.nextLine();
+    }
+
+    @Override
+    public String getDataHusband() {
+        System.out.printf("Введите дату рождения супруга: ");
+        return scanner.nextLine();
+    }
+
+    @Override
+    public String getNameWafe() {
+        System.out.printf("Введите имя супруги: ");
+        return scanner.nextLine();
+    }
+
+    @Override
+    public String getDataWafe() {
+        System.out.printf("Введите дату рождения супруги: ");
+        return scanner.nextLine();
+    }
+    @Override
+    public String getNameFather() {
+        System.out.printf("Введите имя отца: ");
+        return scanner.nextLine();
+    }
+
+    @Override
+    public String getDataFather() {
+        System.out.printf("Введите дату рождения отца: ");
+        return scanner.nextLine();}
+    @Override
+    public String getNameMather() {
+        System.out.printf("Введите имя матери: ");
+        return scanner.nextLine();
+    }
+
+    @Override
+    public String getDataMather() {
+        System.out.printf("Введите дату рождения матери: ");
+        return scanner.nextLine();}
 
     @Override
     public void print(String text) {
-       System.out.printf(text);
+        System.out.printf(text);
     }
 }

@@ -1,7 +1,12 @@
 package Repositoiry;
 
+import Human.Human;
+
 public interface FileServisView {
-    void save(String text);
+
+    <T extends Human> void save(String text);
 
     String load();
+
+
 }

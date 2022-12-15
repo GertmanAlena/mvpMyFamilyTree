@@ -3,21 +3,24 @@ package ui;
 import Presenter.Presenter;
 
 public interface View {
-    void setPresenter(Presenter presenter);
     void start();
+    String getName(); String getData(); String getGender();
+    String getNameChild(); String getDataChild(); String getGenderChild();
 
-    String getName();
-    String getNameChild();
+    void setPresenter(Presenter presenter);
 
-    String getData();
-    String getDataChild();
+    String getNameHusband();
 
-    String getGender();
-    String getGenderChild();
+    String getDataHusband();
 
+    String getNameWafe();
+
+    String getDataWafe();
+    String getNameFather();
+
+    String getDataFather();
+    String getNameMather();
+
+    String getDataMather();
     void print(String text);
-
-
-
-
 }

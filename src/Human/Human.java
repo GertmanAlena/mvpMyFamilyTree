@@ -1,29 +1,23 @@
 package Human;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
-/**
- * создание сущности Human
- * implements Comparable<Human> говорит о том, что мы сможем производить сортировку
- * <Human> с чем сравниваем
- * тут конструктор, гетеры и сетеры,сетод создания списка детей
- * переопределён метод toString
- * переопределён метод compareTo
- */
-public class Human implements Comparable<Human> {
+public class Human {
     private String name;
-    private int id;
+    private String id;
     private String gender;
     private String data;
     private Human father;
     private Human human;
     private Human mother;
-    private int marriageNo;
+    private int marriage;
+
     private ArrayList<Human> children;
-    public Human(String name, String data, String gender, Human father, Human mother){
+    public Human(String name, String data, String gender, Human father, Human mother) {
         this.name = name;
-        this.data = data;
         this.gender = gender;
+        this.data = data;
         this.father = father;
         this.mother = mother;
     }
@@ -31,23 +25,26 @@ public class Human implements Comparable<Human> {
         this.human = human;
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public String toString() {
+//        return id + " " + name + " " + data + " " + gender + " " + marriage + " " + children;
+        return "id-" + id + ", " + name + ", дата рождения: " + data +  ", пол: " + gender + ", брак №: " + marriage + ", дети:" + children + " ";
     }
-    public String getData() {
-        return data;
+
+    public void setName(String name) {
+        this.name = name.substring(0, 1).toUpperCase() + name.substring(1);
     }
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
+
+    public void setId(String id) {
         this.id = id;
     }
-    public void setMarriageNo(int marriage) {
-        this.marriageNo = marriage;
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
-    public ArrayList<Human> getChildren() {
-        return children;
+
+    public void setData(String data) {
+        this.data = data;
     }
     public void setChildren(ArrayList<Human> children) {
         this.children = children;
@@ -56,19 +53,23 @@ public class Human implements Comparable<Human> {
         if (this.getChildren() == null) {this.setChildren(new ArrayList<Human>());}
         this.getChildren().add(human);
     }
-    @Override
-    public String toString() {
-//        return id + " " + name + " " + data + " " + gender + " " + marriageNo + " " + children;
-        return "Human: id-" + id + ", name: " + name + ", data: " + data +  ", gender: " + gender + ", marriageNo: "
-                + marriageNo +  ", children: " + children + " ";
+    public ArrayList<Human> getChildren() {
+        return children;
+    }
+
+    public String getName() {
+        return name.substring(0, 1).toUpperCase() + name.substring(1);
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setMarriage(int marriage) {
+        this.marriage = marriage;
     }
 
     public String getInfo() {
         return String.format("имя: %s дата рождения: %s пол: %s", name, data, gender);
-    }
-
-    @Override
-    public int compareTo(Human o) {
-        return name.compareTo(o.getName()); // в String-ах уже есть метод compareTo
     }
 }

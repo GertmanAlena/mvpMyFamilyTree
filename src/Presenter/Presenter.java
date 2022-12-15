@@ -65,8 +65,8 @@ public class Presenter {
         if(a != null){
             view.print(a.getInfo()+"\n");
         }
-        System.out.println("Что-то пошло не так, попробуйте снова");
-        return true;
+        else view.print("\033[1;31mНичего не нашлось, попробуй ещё раз!\033[0m\n");
+        return false;
     }
     /**
      * загрузка из файла при входе в программу

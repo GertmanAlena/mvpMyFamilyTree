@@ -31,10 +31,8 @@ public class Repository <T extends Human> implements Iterable<T>, RepoInterf {
                 mother.addChildren(p);
                 familyTree.add((T) p);
         } catch (NullPointerException e) {
-            System.out.println("Что-то пошло не так!!");
+            System.out.println("\033[1;31mЧто-то ввёл не то, попробуй ещё раз!!\033[0m");
         }
-
-
     }
     @Override
     public Iterator<T> iterator() {
@@ -47,13 +45,11 @@ public class Repository <T extends Human> implements Iterable<T>, RepoInterf {
     }
     @Override
     public T getPerson(String name, String data){
-
         for (T test : familyTree) {
-           if (test.getName().equals(name.substring(0, 1).toUpperCase() +
-               name.substring(1)) && test.getData().equals(data))
-           return test;
+                if (test.getName().equals(name.substring(0, 1).toUpperCase() +
+                        name.substring(1)) && test.getData().equals(data))
+                    return test;}
 
-            }
         return null;
     }
 
@@ -70,7 +66,7 @@ public class Repository <T extends Human> implements Iterable<T>, RepoInterf {
         StringBuilder sb = new StringBuilder();
         for (T human : familyTree){
             sb.append(human);
-            sb.append("/ ");
+            sb.append("/ \n");
         }
         return sb.toString();
     }
@@ -92,8 +88,11 @@ public class Repository <T extends Human> implements Iterable<T>, RepoInterf {
 //                String[] marriageHuman = new String[20]; // [4] индекс перевести в int и найти вторую половинку с такой цифрой
                     createFamilyHeader(p[0], p[1], p[2]);
                     getPerson(p[0], p[1]).setMarriage(Integer.parseInt(p[3]));
-
                 }
+//                if (p.length == 4) {    // тут проверку другую для добавления детей
+//                    createFamilyHeader(p[0], p[1], p[2]);
+//                    born getPerson(p[0], p[1]).setMarriage(Integer.parseInt(p[3]));
+//                }
             }
         }
 //        {

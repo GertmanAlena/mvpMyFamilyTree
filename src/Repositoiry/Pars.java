@@ -37,36 +37,33 @@ public class Pars {
 //                    String[] nameMass;
 //                    nameMass = humanSplitMass[j].split(": ");
                 name = partsHumanSplit[j].trim();
-                System.out.println("j[" + j + "] name >> " + name + " <<");
+//                System.out.println("j[" + j + "] name >> " + name + " <<");
             }
             if (j == 2) {
                 String[] dataMass;
                 dataMass = partsHumanSplit[j].split(": ");
                 data = dataMass[1].trim();
-                System.out.println("j[" + j + "] data >> " + data + " <<");
+//                System.out.println("j[" + j + "] data >> " + data + " <<");
             }
             if (j == 3) {
                 String[] genderMass;
                 genderMass = partsHumanSplit[j].split(": ");
                 gender = genderMass[1].trim();
-                System.out.println("j[" + j + "] gender >> " + gender + " <<");
+//                System.out.println("j[" + j + "] gender >> " + gender + " <<");
             }
 
             if (j == 4) {
                 String[] marriageMass;
                 marriageMass = partsHumanSplit[j].split(": ");
                 marriage = Integer.valueOf(marriageMass[1]);
-                System.out.println("j[" + j + "] marriage >> " + marriage + " <<");
+//                System.out.println("j[" + j + "] marriage >> " + marriage + " <<");
             }
             if (j == 5) {
                 String[] childrenMass;
                 childrenMass = partsHumanSplit[j].split(":");
                 children = childrenMass[1].trim();
-                System.out.println("j[" + j + "] children = >> " + children + " <<");
+//                System.out.println("j[" + j + "] children = >> " + children + " <<");
             }
-
-
-
         }
         if (children.equals("null") && marriage == 0) {
             System.out.println(" if просто человек");
@@ -77,12 +74,20 @@ public class Pars {
             return person;
         } else if (marriage != 0) {
             System.out.println(" if есть брак");
-            String[] person1 = new String[4];
-            person1[0] = name;
-            person1[1] = data;
-            person1[2] = gender;
-            person1[3] = Integer.toString(marriage);
-            return person1;
+            String[] person = new String[4];
+            person[0] = name;
+            person[1] = data;
+            person[2] = gender;
+            person[3] = Integer.toString(marriage);
+            return person;
+//        }else if (children != null) {
+//            System.out.println(" if есть ребёнок");
+//            String[] person = new String[4];  // читаем и создаём меня, потом сразу берём как маму
+//            person[0] = name;
+//            person[1] = data;
+//            person[2] = gender;
+//            person[3] = Integer.toString(marriage);
+//            return person;
         }
 
 

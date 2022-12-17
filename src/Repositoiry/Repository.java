@@ -15,7 +15,7 @@ public class Repository implements Iterable<Human>, Serializable {
 
     ProcedurHuman pr = new ProcedurHuman();
     int marriageCount = 0;
-    private final List<Human> familyTree = new ArrayList<>();
+    private List<Human> familyTree = new ArrayList<>();
     FileServisView file = new FileServis();
     /**
      * метод создания узла
@@ -85,7 +85,8 @@ public class Repository implements Iterable<Human>, Serializable {
         file.save(familyTree);
     }
     public void load() {
-            file.load(familyTree);
+        file.load(familyTree);
+
     }
     public void clear() {
         file.clear();

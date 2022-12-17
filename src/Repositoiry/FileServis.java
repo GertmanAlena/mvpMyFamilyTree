@@ -36,19 +36,21 @@ public class FileServis implements FileServisView {
         {System.err.println("Error in file cleaning: " + e.getMessage());}
     }
     public List<Human> load(List<Human> familyTree){
+//        List<Human> familyTree= new ArrayList<Human>();
         try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("family.txt")))
         {
 
-            Human h = (Human) ois.readObject();
-            familyTree.add(h);
-//          familyTree=((ArrayList<Human>)ois.readObject());
+//            Human h = (Human) ois.readObject();
+//            familyTree.add(h);
+          familyTree=((ArrayList<Human>)ois.readObject());
         }
         catch(Exception ex){
 
             System.out.println("---"+ex.getMessage());
         }
-        for(Human p : familyTree)
-            System.out.printf("Name: %s \t \n", p.getName());
+//        for(Human p : familyTree)
+//            System.out.printf("Name: %s \t \n", p.getName());
+
         return familyTree;
     }
 }

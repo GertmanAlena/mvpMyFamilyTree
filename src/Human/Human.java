@@ -1,7 +1,8 @@
 package Human;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Human implements HumanInterface, Comparable<Human> {
+public class Human implements HumanInterface, Comparable<Human>, Serializable {
     private String name;
     private String id;
     private String gender;

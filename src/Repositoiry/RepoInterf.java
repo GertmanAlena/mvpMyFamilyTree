@@ -1,13 +1,12 @@
-package Repositoiry;
+//package Repositoiry;
+////
+////import Human.Human;
+////
+////import java.util.List;
+////
+//public interface RepoInterf{
+//    void createFamilyHeader(String name, String data, String gender);
 //
-//import Human.Human;
 //
-//import java.util.List;
-//
-public interface RepoInterf{
-    void clear();
-    void load();
-
-
-
-}
+//    void createFamilyHeader(String name, String data, String gender, String id);
+//}

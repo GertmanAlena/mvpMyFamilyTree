@@ -2,11 +2,12 @@ package Repositoiry;
 
 import Human.Human;
 
+import java.util.List;
+
 public interface FileServisView {
 
-    <T extends Human> void save(String text);
-
-    String load();
+    void save(List<Human> familyTree);
+    List<Human> load(List<Human> familyTree);
     void clear();
 
 

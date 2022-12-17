@@ -40,7 +40,6 @@ public class Presenter {
         repository.born(repository.getPerson(view.getNameFather(), view.getDataFather()),
                 repository.getPerson(view.getNameMather(), view.getDataMather()),
                 name.substring(0, 1).toUpperCase() + name.substring(1), data, gender);
-//        repository.convertListToString();
     }
     /**
      * вступили в брак

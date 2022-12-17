@@ -1,34 +1,28 @@
 package Repositoiry;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.util.Scanner;
+import Human.Human;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FileServis implements FileServisView {
     private final static String filePath = "family.txt";
-
     @Override
-    public void save(String text){
-        System.out.println("Сохранили");
-        try (FileWriter fw = new FileWriter(filePath, true)){
-            fw.write(text+"\n");
-            fw.flush();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-    @Override
-    public String load() {
-        StringBuilder sb = new StringBuilder();
-        try(Scanner scanner = new Scanner(new File(filePath))){
-            while (scanner.hasNextLine()){
-                sb.append(scanner.nextLine());
+    public void save(List<Human> familyTree) {
+        try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("family.txt")))
+        {
+            for (Human human : familyTree){
+                oos.writeObject(human);
+                System.out.println("File has been written");
             }
-        }catch (Exception e){
-            System.out.println("\033[1;30;44mдерево пустое!!!\033[0m");
+
         }
-        return sb.toString();
+        catch(Exception ex){
+
+            System.out.println(ex.getMessage());
+        }
+
     }
     @Override
     public void clear(){
@@ -41,8 +35,24 @@ public class FileServis implements FileServisView {
         } catch (Exception e)
         {System.err.println("Error in file cleaning: " + e.getMessage());}
     }
+    public List<Human> load(List<Human> familyTree){
+        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("family.txt")))
+        {
+
+            Human h = (Human) ois.readObject();
+            familyTree.add(h);
+//          familyTree=((ArrayList<Human>)ois.readObject());
+        }
+        catch(Exception ex){
+
+            System.out.println("---"+ex.getMessage());
+        }
+        for(Human p : familyTree)
+            System.out.printf("Name: %s \t \n", p.getName());
+        return familyTree;
+    }
 }
-//        pars.parse(loadFiles);
+
 
 
 

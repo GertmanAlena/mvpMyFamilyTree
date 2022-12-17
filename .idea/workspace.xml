@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="14fe9146-c33b-476f-bd94-05589561da7d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/family.txt" beforeDir="false" afterPath="$PROJECT_DIR$/family.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Human/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Human/HumanInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/HumanInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositoiry/FileServis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/FileServis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositoiry/FileServisView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/FileServisView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositoiry/Pars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/Pars.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repositoiry/RepoInterf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/RepoInterf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositoiry/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ConsoleUI.java" afterDir="false" />
     </list>
@@ -79,7 +72,7 @@
       <workItem from="1670837345775" duration="17195000" />
       <workItem from="1671003492194" duration="34239000" />
       <workItem from="1671199663497" duration="24084000" />
-      <workItem from="1671269932689" duration="16156000" />
+      <workItem from="1671269932689" duration="17667000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;mvp начало положено))&quot;">
       <created>1670691243158</created>
@@ -137,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671134515038</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="&quot;доделала загрузку и парсинг из файла!! работа почти готова&quot;">
+      <created>1671289165490</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671289165490</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +151,8 @@
     <MESSAGE value="&quot;....&quot;" />
     <MESSAGE value="&quot;после загрузки из вайла добавляю в лист... не получается&quot;" />
     <MESSAGE value="&quot;добавила try/catch и начала парсить из .txt&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;добавила try/catch и начала парсить из .txt&quot;" />
+    <MESSAGE value="&quot;доделала загрузку и парсинг из файла!! работа почти готова&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;доделала загрузку и парсинг из файла!! работа почти готова&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

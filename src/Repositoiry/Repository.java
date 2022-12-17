@@ -122,13 +122,10 @@ public class Repository <T extends Human> extends Pars implements Iterable<T>, R
      */
     public void load() {
         String res = file.load();
-
         String[] person = res.split(" / "); // все люди под индексами humanSplitMass человек;
             for (int i = 0; i < person.length; i++) { // [0] id-13121984, Алёна, дата рождения: 13.12.1984, пол: ж, брак №: 0, дети:null
             String[] partsHumanSplit = person[i].split(","); // по частям partsHumanSplit
-//                String[] oneHumanAndChildren = res.split(" / ");
                 for (int j = 0; j < partsHumanSplit.length; j++) {// [0] id-13121984, [1] Алёна, [2] дата рождения: 13.12.1984, пол: ж, брак №: 0, дети:null
-
                     String[] x;
                     x = partsHumanSplit[j].split(":");
                     if(x[0].equals("id")){
@@ -144,7 +141,6 @@ public class Repository <T extends Human> extends Pars implements Iterable<T>, R
                         gender = x[1];
                     }
                     if(x[0].equals(" брак №")){
-        //                marriage = Integer.parseInt(x[1]);
                         marriage = Integer.valueOf(x[1]);
                     }
                     if(x[0].equals(" дети")) {

@@ -32,7 +32,6 @@ public class Human implements HumanInterface {
     }
     @Override
     public String toString() {
-//        return id + " " + name + " " + data + " " + gender + " " + marriage + " " + children;
         return "id: " + id + ", имя: " + name + ", дата рождения: " + data +  ", пол: " + gender + ", брак №:" + marriage + ", дети:" + children;
     }
     @Override

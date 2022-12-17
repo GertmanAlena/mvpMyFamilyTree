@@ -1,12 +1,9 @@
 package ui;
 import Presenter.Presenter;
 import java.util.Scanner;
-
 public class ConsoleUI implements View {
-
     private Presenter presenter;
     private Scanner scanner;
-
     /**
      * общение с пользователем
      */
@@ -16,8 +13,6 @@ public class ConsoleUI implements View {
     public void setPresenter(Presenter presenter){
         this.presenter = presenter;
     }
-
-
     @Override
     public void start() {
         presenter.load();
@@ -25,13 +20,12 @@ public class ConsoleUI implements View {
         try (Scanner scan = new Scanner(System.in)) {
             while (true) {
                 System.out.println(" 1 - Внести узел дерева 2 - вступили в брак 3 - рождение ребёнка 4 - Показать всё дерево 5 - найти человека " +
-                        "6 - save 7 - ----\n\033[1;35mДля выхода нажмите (0)\033[0m");
+                        "6 - save 7 - очистить файл с деревом\n\033[1;35mДля выхода нажмите (0)\033[0m");
                 String key = scan.next();
                 System.out.print("\033[H\033[J");
                 switch (key) {
                     case "1":
                         presenter.create(getName(), getData(), getGender());
-
                         break;
                     case "2":
                         presenter.marriage();
@@ -49,7 +43,7 @@ public class ConsoleUI implements View {
                         presenter.save();
                         break;
                     case "7":
-//
+                        presenter.clear();
                         break;
                     case "0":
                         System.exit(0);
@@ -61,8 +55,6 @@ public class ConsoleUI implements View {
         }
 
     }
-
-
     @Override
     public String getName() {
         System.out.printf("Введите имя: ");
@@ -98,19 +90,16 @@ public class ConsoleUI implements View {
         System.out.printf("Введите имя супруга: ");
         return scanner.nextLine();
     }
-
     @Override
     public String getDataHusband() {
         System.out.printf("Введите дату рождения супруга: ");
         return scanner.nextLine();
     }
-
     @Override
     public String getNameWafe() {
         System.out.printf("Введите имя супруги: ");
         return scanner.nextLine();
     }
-
     @Override
     public String getDataWafe() {
         System.out.printf("Введите дату рождения супруги: ");
@@ -121,7 +110,6 @@ public class ConsoleUI implements View {
         System.out.printf("Введите имя отца: ");
         return scanner.nextLine();
     }
-
     @Override
     public String getDataFather() {
         System.out.printf("Введите дату рождения отца: ");
@@ -131,7 +119,6 @@ public class ConsoleUI implements View {
         System.out.printf("Введите имя матери: ");
         return scanner.nextLine();
     }
-
     @Override
     public String getDataMather() {
         System.out.printf("Введите дату рождения матери: ");

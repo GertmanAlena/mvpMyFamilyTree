@@ -7,9 +7,15 @@
     <list default="true" id="14fe9146-c33b-476f-bd94-05589561da7d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/family.txt" beforeDir="false" afterPath="$PROJECT_DIR$/family.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Human/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Human/HumanInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/HumanInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presenter/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositoiry/FileServis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/FileServis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositoiry/FileServisView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/FileServisView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositoiry/Pars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/Pars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositoiry/RepoInterf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/RepoInterf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositoiry/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ConsoleUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,19 +42,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/studies/JAVA/mvpMyFamilyTree/src/Repositoiry",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/studies/JAVA/MyFamilyTree&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\studies\JAVA\mvpMyFamilyTree\src\Repositoiry" />
@@ -71,7 +77,9 @@
       <workItem from="1670690162355" duration="14406000" />
       <workItem from="1670748171706" duration="30893000" />
       <workItem from="1670837345775" duration="17195000" />
-      <workItem from="1671003492194" duration="33244000" />
+      <workItem from="1671003492194" duration="34239000" />
+      <workItem from="1671199663497" duration="24084000" />
+      <workItem from="1671269932689" duration="16156000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;mvp начало положено))&quot;">
       <created>1670691243158</created>
@@ -122,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671132222733</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="&quot;добавила try/catch и начала парсить из .txt&quot;">
+      <created>1671134515038</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671134515038</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,5 +152,25 @@
     <MESSAGE value="&quot;после загрузки из вайла добавляю в лист... не получается&quot;" />
     <MESSAGE value="&quot;добавила try/catch и начала парсить из .txt&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="&quot;добавила try/catch и начала парсить из .txt&quot;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Repositoiry/ProcedurHuman.java</url>
+          <line>8</line>
+          <properties class="Repositoiry.ProcedurHuman" method="DataToId">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="partsHumanSplit[j]" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

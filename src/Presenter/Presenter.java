@@ -74,5 +74,9 @@ public class Presenter {
     public void load() {
         repository.load();
     }
+    public void clear() {
+        repository.clear();
+
+    }
 
 }

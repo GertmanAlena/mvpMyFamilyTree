@@ -1,7 +1,7 @@
 package Human;
 import java.util.ArrayList;
 
-public class Human implements HumanInterface {
+public class Human implements HumanInterface, Comparable<Human> {
     private String name;
     private String id;
     private String gender;
@@ -83,4 +83,10 @@ public class Human implements HumanInterface {
     public String getInfo() {
         return String.format("id: %s имя: %s дата рождения: %s пол: %s брак: %d дети: %s", id, name, data, gender, marriage, children);
     }
+
+    @Override
+    public int compareTo(Human o) {
+        return name.compareTo(o.getName()); // в String-ах уже есть метод compareTo
+    }
+
 }

@@ -3,6 +3,7 @@ package Repositoiry;
 import Human.Human;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -17,7 +18,6 @@ public class Repository <T extends Human> extends Pars implements Iterable<T>, R
     private final List<T> familyTree = new ArrayList<>();
     FileServisView file = new FileServis();
     String[] xxx;
-
     /**
      * метод создания узла
      * @param name имя человека
@@ -57,7 +57,6 @@ public class Repository <T extends Human> extends Pars implements Iterable<T>, R
             System.out.println("\033[1;31mЧто-то ввёл не то, попробуй ещё раз!!\033[0m");
         }
     }
-
     /**
      * метод для добавления ребёнка при загрузке файла
      * с проверкой, если уже человек добавлен в лист
@@ -76,9 +75,12 @@ public class Repository <T extends Human> extends Pars implements Iterable<T>, R
         }
     }
     public Iterator<T> iterator() {
-        return null;
+        return new GroupIterator(familyTree);
+//        return familyTree.iterator();
     }
-
+    public void sortByName() {
+        Collections.sort(familyTree, new HumanComporatorByName());
+    }
     /**
      * метод для просмотра всего дерева
      */
@@ -169,4 +171,6 @@ public class Repository <T extends Human> extends Pars implements Iterable<T>, R
         file.clear();
         familyTree.clear();
     }
+
+
 }

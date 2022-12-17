@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14fe9146-c33b-476f-bd94-05589561da7d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Repositoiry/GroupIterator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repositoiry/HumanComporatorByName.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Human/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presenter/Presenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositoiry/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ConsoleUI.java" afterDir="false" />
     </list>
@@ -18,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -35,19 +38,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/studies/JAVA/MyFamilyTree&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/studies/JAVA/mvpMyFamilyTree/src/Repositoiry",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\studies\JAVA\mvpMyFamilyTree\src\Repositoiry" />
@@ -72,7 +75,7 @@
       <workItem from="1670837345775" duration="17195000" />
       <workItem from="1671003492194" duration="34239000" />
       <workItem from="1671199663497" duration="24084000" />
-      <workItem from="1671269932689" duration="17667000" />
+      <workItem from="1671269932689" duration="19891000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;mvp начало положено))&quot;">
       <created>1670691243158</created>
@@ -137,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671289165490</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="&quot;доделала&quot;">
+      <created>1671290686328</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671290686328</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +162,8 @@
     <MESSAGE value="&quot;после загрузки из вайла добавляю в лист... не получается&quot;" />
     <MESSAGE value="&quot;добавила try/catch и начала парсить из .txt&quot;" />
     <MESSAGE value="&quot;доделала загрузку и парсинг из файла!! работа почти готова&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;доделала загрузку и парсинг из файла!! работа почти готова&quot;" />
+    <MESSAGE value="&quot;доделала&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;доделала&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

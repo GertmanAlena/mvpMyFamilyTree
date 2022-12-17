@@ -78,5 +78,8 @@ public class Presenter {
         repository.clear();
 
     }
+    public void sort(){
+        repository.sortByName();
+    }
 
 }

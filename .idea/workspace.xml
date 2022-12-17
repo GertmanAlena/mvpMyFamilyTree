@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14fe9146-c33b-476f-bd94-05589561da7d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Repositoiry/GroupIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repositoiry/HumanComporatorByName.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Human/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presenter/Presenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositoiry/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/ConsoleUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/ConsoleUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +70,7 @@
       <workItem from="1670837345775" duration="17195000" />
       <workItem from="1671003492194" duration="34239000" />
       <workItem from="1671199663497" duration="24084000" />
-      <workItem from="1671269932689" duration="19891000" />
+      <workItem from="1671269932689" duration="21287000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;mvp начало положено))&quot;">
       <created>1670691243158</created>
@@ -147,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671290686328</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="&quot;добавила сортировку дерева по имени&quot;">
+      <created>1671292960138</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671292960138</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,7 +165,8 @@
     <MESSAGE value="&quot;добавила try/catch и начала парсить из .txt&quot;" />
     <MESSAGE value="&quot;доделала загрузку и парсинг из файла!! работа почти готова&quot;" />
     <MESSAGE value="&quot;доделала&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;доделала&quot;" />
+    <MESSAGE value="&quot;добавила сортировку дерева по имени&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;добавила сортировку дерева по имени&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

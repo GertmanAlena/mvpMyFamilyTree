@@ -9,13 +9,12 @@ import java.util.List;
 
 /**
  * в этом методе творится вся магия
- * @param <T>
  */
-public class Repository <T extends Human> extends Pars implements Iterable<T>, RepoInterf  {
+public class Repository extends Pars implements Iterable<Human>, RepoInterf  {
 
     ProcedurHuman pr = new ProcedurHuman();
     int marriageCount = 0;
-    private final List<T> familyTree = new ArrayList<>();
+    private final List<Human> familyTree = new ArrayList<>();
     FileServisView file = new FileServis();
     String[] xxx;
     /**
@@ -28,14 +27,14 @@ public class Repository <T extends Human> extends Pars implements Iterable<T>, R
         Human p = new Human(name,  data, gender, null, null);
         String id = pr.DataToId(data);
         p.setId(id);
-        familyTree.add((T) p);
+        familyTree.add(p);
     }
     public void createFamilyHeaderMarriage(String name, String data, String gender, int marriage){
         Human p = new Human(name,  data, gender, null, null);
         String id = pr.DataToId(data);
         p.setId(id);
         p.setMarriage(marriage);
-        familyTree.add((T) p);
+        familyTree.add(p);
     }
     /**
      * метод для добавления родившегося ребёнка
@@ -45,14 +44,14 @@ public class Repository <T extends Human> extends Pars implements Iterable<T>, R
      * @param data дата рождения ребёнка
      * @param gender пол ребёнка
      */
-     public void born(T father, T mother, String name, String data, String gender){
+     public void born(Human father, Human mother, String name, String data, String gender){
         try{
                 Human p = new Human(name, data, gender, father, mother);
                 String id = pr.DataToId(data);
                 p.setId(id);
                 father.addChildren(p);
                 mother.addChildren(p);
-                familyTree.add((T) p);
+                familyTree.add(p);
         } catch (NullPointerException e) {
             System.out.println("\033[1;31mЧто-то ввёл не то, попробуй ещё раз!!\033[0m");
         }
@@ -61,20 +60,20 @@ public class Repository <T extends Human> extends Pars implements Iterable<T>, R
      * метод для добавления ребёнка при загрузке файла
      * с проверкой, если уже человек добавлен в лист
      */
-    public void bornOneParent(T parent, String name, String data, String gender){
+    public void bornOneParent(Human parent, String name, String data, String gender){
         try{
             Human p = new Human(name, data, gender, parent);
             String id = pr.DataToId(data);
             p.setId(id);
             parent.addChildren(p);
             if(getPerson(name, data) == null){
-                familyTree.add((T) p);
+                familyTree.add(p);
             }
         } catch (NullPointerException e) {
             System.out.println("\033[1;31mЧто-то ввёл не то, попробуй ещё раз!!\033[0m");
         }
     }
-    public Iterator<T> iterator() {
+    public Iterator<Human> iterator() {
         return new GroupIterator(familyTree);
 //        return familyTree.iterator();
     }
@@ -85,7 +84,7 @@ public class Repository <T extends Human> extends Pars implements Iterable<T>, R
      * метод для просмотра всего дерева
      */
     public void showAll(){
-        for (T human : familyTree){
+        for (Human human : familyTree){
             System.out.println(human.getInfo());
         }
     }
@@ -93,15 +92,15 @@ public class Repository <T extends Human> extends Pars implements Iterable<T>, R
     /**
      * метод поиска человека в дереве
      */
-    public T getPerson(String name, String data){
-        for (T test : familyTree) {
+    public Human getPerson(String name, String data){
+        for (Human test : familyTree) {
                 if (test.getName().equals(name.substring(0, 1).toUpperCase() +
                         name.substring(1)) && test.getData().equals(data))
                     return test;}
         return null;
     }
 
-    public void marriage(T husband, T wafe){
+    public void marriage(Human husband, Human wafe){
         husband.setMarriage(++marriageCount);
         wafe.setMarriage(marriageCount);
     }
@@ -112,7 +111,7 @@ public class Repository <T extends Human> extends Pars implements Iterable<T>, R
 
     public String convertListToString(){ // возвращаем  String
         StringBuilder sb = new StringBuilder();
-        for (T human : familyTree){
+        for (Human human : familyTree){
             sb.append(human);
             sb.append(" / \n");
         }

@@ -85,7 +85,7 @@ public class Repository implements Iterable<Human>, Serializable {
         file.save(familyTree);
     }
     public void load() {
-        file.load(familyTree);
+        familyTree = file.load();
 
     }
     public void clear() {

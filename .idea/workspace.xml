@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/family.txt" beforeDir="false" afterPath="$PROJECT_DIR$/family.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositoiry/FileServis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/FileServis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repositoiry/FileServisView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/FileServisView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repositoiry/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repositoiry/Repository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,19 +36,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/studies/JAVA/mvpMyFamilyTree/src/Repositoiry",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/studies/JAVA/mvpMyFamilyTree/src/Repositoiry&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\studies\JAVA\mvpMyFamilyTree\src\Repositoiry" />
@@ -72,7 +73,8 @@
       <workItem from="1670837345775" duration="17195000" />
       <workItem from="1671003492194" duration="34239000" />
       <workItem from="1671199663497" duration="24084000" />
-      <workItem from="1671269932689" duration="33244000" />
+      <workItem from="1671269932689" duration="33350000" />
+      <workItem from="1671345521712" duration="2027000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;mvp начало положено))&quot;">
       <created>1670691243158</created>
@@ -165,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671309543124</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="&quot;Serialization добавила&quot;">
+      <created>1671315315610</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671315315610</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

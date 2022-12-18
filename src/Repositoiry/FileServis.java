@@ -12,17 +12,12 @@ public class FileServis implements FileServisView {
     public void save(List<Human> familyTree) {
         try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("family.txt")))
         {
-            for (Human human : familyTree){
-                oos.writeObject(human);
-                System.out.println("File has been written");
-            }
-
-        }
-        catch(Exception ex){
+            oos.writeObject(familyTree);
+            System.out.println("File has been written");
+            }catch(Exception ex){
 
             System.out.println(ex.getMessage());
         }
-
     }
     @Override
     public void clear(){
@@ -35,23 +30,36 @@ public class FileServis implements FileServisView {
         } catch (Exception e)
         {System.err.println("Error in file cleaning: " + e.getMessage());}
     }
-    public List<Human> load(List<Human> familyTree){
-//        List<Human> familyTree= new ArrayList<Human>();
-        try(ObjectInputStream ois = new ObjectInputStream(new FileInputStream("family.txt")))
-        {
+    public List<Human> load(){
+        ArrayList<Human> familyTree = new ArrayList<>();
+    try{
+        FileInputStream fis = new FileInputStream("family.txt");
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        familyTree = (ArrayList) ois.readObject();
 
-//            Human h = (Human) ois.readObject();
-//            familyTree.add(h);
-          familyTree=((ArrayList<Human>)ois.readObject());
+        ois.close();
+        fis.close();
+
+        for (Human h : familyTree) {
+            System.out.println(h.toString());
+            System.out.println();
+            return familyTree;
         }
-        catch(Exception ex){
+    }
+        catch (FileNotFoundException e){
 
-            System.out.println("---"+ex.getMessage());
+            e.printStackTrace();
         }
-//        for(Human p : familyTree)
-//            System.out.printf("Name: %s \t \n", p.getName());
+        catch (IOException e){
 
-        return familyTree;
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e){
+
+            e.printStackTrace();
+        }
+        return null;
+
     }
 }
 

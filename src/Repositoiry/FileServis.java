@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileServis implements FileServisView {
+public class FileServis  implements FileServisView {
     private final static String filePath = "family.txt";
     @Override
     public void save(List<Human> familyTree) {
@@ -21,12 +21,13 @@ public class FileServis implements FileServisView {
     }
     @Override
     public void clear(){
-        System.out.println("Дерево очищено");
+
         try {
             FileWriter fstream1 = new FileWriter(filePath);// конструктор с одним параметром - для перезаписи
             BufferedWriter out1 = new BufferedWriter(fstream1); //  создаём буферезированный поток
             out1.write(""); // очищаем, перезаписав поверх пустую строку
             out1.close(); // закрываем
+            System.out.println("Дерево очищено");
         } catch (Exception e)
         {System.err.println("Error in file cleaning: " + e.getMessage());}
     }
@@ -47,8 +48,8 @@ public class FileServis implements FileServisView {
         }
     }
         catch (FileNotFoundException e){
-
-            e.printStackTrace();
+            System.out.println("\033[1;33;40mфайла пока нет, создайте его\033[0m");
+//            e.printStackTrace();
         }
         catch (IOException e){
 
@@ -58,7 +59,7 @@ public class FileServis implements FileServisView {
 
             e.printStackTrace();
         }
-        return null;
+        return familyTree;
 
     }
 }

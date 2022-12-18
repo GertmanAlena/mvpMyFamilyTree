@@ -1,5 +1,6 @@
 package Presenter;
 
+import Human.Human;
 import Repositoiry.Repository;
 import ui.View;
 
@@ -40,6 +41,11 @@ public class Presenter {
         repository.born(repository.getPerson(view.getNameFather(), view.getDataFather()),
                 repository.getPerson(view.getNameMather(), view.getDataMather()),
                 name.substring(0, 1).toUpperCase() + name.substring(1), data, gender);
+    }
+    public void addParents(){
+        repository.addParents(repository.getPerson(view.getNameFather(), view.getDataFather()),
+                repository.getPerson(view.getNameMather(), view.getDataMather()),
+                repository.getPerson(view.getNameChild(), view.getDataChild()));
     }
     /**
      * вступили в брак

@@ -50,6 +50,15 @@ public class Repository implements Iterable<Human>, Serializable {
             System.out.println("\033[1;31mЧто-то ввёл не то, попробуй ещё раз!!\033[0m");
         }
     }
+    public void addParents(Human mother, Human father, Human child){
+        try{
+            father.addChildren(child);
+            mother.addChildren(child);
+        } catch (NullPointerException e) {
+            System.out.println("\033[1;31mЧто-то ввёл не то, попробуй ещё раз!!\033[0m");
+        }
+    }
+
     public Iterator<Human> iterator() {
         return new GroupIterator(familyTree);
     }

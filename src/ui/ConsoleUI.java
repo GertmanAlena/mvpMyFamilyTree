@@ -23,7 +23,7 @@ public class ConsoleUI implements View {
                         "\033[1;34m3\033[0m - рождение ребёнка" + " \033[1;34m4\033[0m - Показать всё дерево " +
                         "\n\033[1;34m5\033[0m - найти человека " +
                         "\033[1;34m6\033[0m - save \033[1;34m7\033[0m - очистить файл с деревом" + "\n\033[1;34m8\033[0m - отсортировать дерево по имени " +
-                        "\n\033[1;35mДля выхода нажмите (0)\033[0m");
+                        "\033[1;34m9\033[0m - соединить родителей и детей" + "\n\033[1;35mДля выхода нажмите (0)\033[0m");
                 String key = scan.next();
                 System.out.print("\033[H\033[J");
                 switch (key) {
@@ -50,6 +50,9 @@ public class ConsoleUI implements View {
                         break;
                     case "8":
                         presenter.sort();
+                        break;
+                    case "9":
+                        presenter.addParents();
                         break;
                     case "0":
                         System.exit(0);
